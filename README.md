@@ -7,6 +7,22 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 ## Deployment Link: https://paj-03-project-hi-nu.herokuapp.com/
 
 ## User Stories:
+- AAUI want to add things I have done.
+- AAUI want to add current activities.
+- AAUI want to  add bucket list objectives.
+- AAUI want to have a "Talent Tree" view with listed hobbies and skills.
+- AAUI want to have 2 categories of activities:
+  - Quest in progress (Intend on completing).
+  - Quest Completed.
+- AAUI want to have 3 categories skills:
+  - Easy Mode (Novice).
+  - Medium Mode (Intermediate).
+  - Hard Mode (Expert / Advanced).
+- AAUI want to have 2 categories for skill training:
+  - Default (not currently active).
+  - Leveling (active with skill).
+- AAUI want to be able to add pictures to skills and activities.
+- AAUI want to get "REP" (reality experience points for added skills and activities.
 
 ## Wireframes / ERD (Entity Relationship Diagram):
 ![WIREFRAME](img/wireframe.png)
@@ -30,6 +46,10 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 - VS Code Editor
 
 ## Stretch Goals:
+- AAUI want to post a bucket list challenge visible to other users as a "quest".
+- AAUI want to have skill categories.
+- AAUI want to map places visited.
+- AAUI want to map places to visit.
 
 ## Resources and References: 
 // https://getbootstrap.com/
