@@ -56,3 +56,4 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 // https://docs.djangoproject.com/en/3.0/topics/forms/
 // https://thenounproject.com/term/bucket-list/2119421/
 // https://thenounproject.com/term/bucket-list/3212168/
+// https://www.tutorialrepublic.com/faq/how-to-align-responsive-image-in-center-in-bootstrap.php

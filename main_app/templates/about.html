@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 <h1>About Repbucket</h1>
 <hr />
 <p>Repbucket is a platform that "gamifies" the tracking and highlighting of achievements, activities, skills, hobbies, and goals. From the mundane to monumental, goals are your "Quests", which can be found on your "Quest Board". Your skills and hobbies are represented as skills on your "Talent Tree". Level them up as you see fit.</p>
+<div class="container">
+<img class="mg-responsive center-block d-block mx-auto" src="{% static 'skill.png' %}" width="500" height="500" alt="" loading="lazy">
+</div>
 
 {% endblock %}
