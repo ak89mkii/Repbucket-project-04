@@ -1,14 +1,14 @@
 from django.db import models
 
 SETTINGS = (
-    ('B', 'Morning'),
-    ('L', 'Noon'),
-    ('D', 'Night')
+    ('E', 'Easy'),
+    ('M', 'Medium'),
+    ('H', 'Hard')
 )
 
 LEVELINGS = (
-    ('B', 'Morning'),
-    ('L', 'Noon')
+    ('L', 'Leveling'),
+    ('S', 'Standby')
 )
 
 class Talent(models.Model):
