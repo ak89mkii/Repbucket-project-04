@@ -6,9 +6,12 @@ SETTINGS = (
     ('D', 'Night')
 )
 
+LEVELINGS = (
+    ('B', 'Morning'),
+    ('L', 'Noon')
+)
 
-
-class Comic(models.Model):
+class Talent(models.Model):
     skill = models.CharField(max_length=100)
     setting = models.CharField(
         max_length=1,
@@ -17,8 +20,8 @@ class Comic(models.Model):
     )
     leveling = models.CharField(
         max_length=1,
-        choices=SETTINGS,
-        default=SETTINGS[0][0]
+        choices=LEVELINGS,
+        default=LEVELINGS[0][0]
     )
     image = models.CharField(max_length=1000)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
