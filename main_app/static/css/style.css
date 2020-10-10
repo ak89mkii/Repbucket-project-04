@@ -1,3 +1,7 @@
 body {
     background-color: slategrey;
   }
+
+.navbar {
+    font-size: 30px;
+}
