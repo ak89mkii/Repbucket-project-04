@@ -1,5 +1,5 @@
 from django.shortcuts import render
-# from .models import Skill,
+from .models import Skill,
 
 
 def home(request):
@@ -8,6 +8,6 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
-# def skills_index(request):
-#   skills = Skill.objects.filter(user=request.user)
-#   return render(request, 'skills/index.html', { 'skills': skills })
+def skills_index(request):
+  skills = Skill.objects.filter(user=request.user)
+  return render(request, 'skills/index.html', { 'skills': skills })
