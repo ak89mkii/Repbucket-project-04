@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 SETTINGS = (
     ('Easy', 'Easy'),
@@ -41,5 +42,5 @@ class Talent(models.Model):
         choices=COLORS,
         default=COLORS[0][0]
     )
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
