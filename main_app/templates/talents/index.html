@@ -2,12 +2,13 @@
 {% block content %}
 
 <h1>Talent Tree</h1>
-
+<hr />
 {% for talent in talents %}
 <p>Skill: {{ talent.skill }}</p>
 <p>Setting: {{ talent.setting }}</p>
 <p>Leveling: {{ talent.leveling }}</p>
-<p>Add Image: {{ talent.image }}</p>
+<img class="navbar-brand" src="{{ talent.image }}" width="100" height="100" alt="" loading="lazy">
+
 {% endfor %}
 
 {% endblock %}
