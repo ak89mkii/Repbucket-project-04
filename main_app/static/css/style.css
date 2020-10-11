@@ -9,3 +9,7 @@ body {
 .navbar {
     font-size: 30px;
 }
+
+body {
+    height: 100%;
+}
