@@ -1,10 +1,10 @@
-# Repbucket
+# RepBucket
 
 ## Description:
 
 Repbucket is a platform that "gamifies" the tracking and highlighting of achievements, activities, skills, hobbies, and goals. From the mundane to monumental, goals are your "Quests", which can be found on your "Quest Board". Your skills and hobbies are represented as skills on your "Talent Tree". Level them up as you see fit.
 
-## Deployment Link: https://paj-03-project-hi-nu.herokuapp.com/
+## Deployment Link: 
 
 ## User Stories:
 - AAUI want to add things I have done.
