@@ -4,7 +4,10 @@
 <h1>Talent Tree</h1>
 
 {% for talent in talents %}
-
+<p>Skill: {{ talent.skill }}</p>
+<p>Setting: {{ talent.setting }}</p>
+<p>Leveling: {{ talent.leveling }}</p>
+<p>Add Image: {{ talent.image }}</p>
 {% endfor %}
 
 {% endblock %}
