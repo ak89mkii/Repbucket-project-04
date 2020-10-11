@@ -42,3 +42,4 @@ class Talent(models.Model):
         default=COLORS[0][0]
     )
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
+
