@@ -8,6 +8,7 @@
   <div class="row">
     <div class="col-sm-4">
       <h1>Talents</h1>
+      <hr />
 
 {% for talent in talents %}
   <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
@@ -31,26 +32,14 @@
   <div class="col-sm-4">
     <h1></h1>
     {% for talent in talents %}
-      <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="{{ talent.image }}" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ talent.skill }}</h5>
-              <p class="card-text">Setting: {{ talent.setting }}</p>
-              <p class="card-text">Leveling: {{ talent.leveling }}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+
     {% endfor %}
 
   </div>
   <div class="col-sm-4">
     <h1>To Learn</h1>
+    <hr />
     {% for talent in talents %}
       <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
         <div class="row no-gutters">
