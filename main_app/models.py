@@ -8,7 +8,7 @@ SETTINGS = (
 )
 
 LEVELINGS = (
-    ('Leveling', 'Leveling'),
+    ('Active', 'Active'),
     ('Standby', 'Standby')
 )
 
