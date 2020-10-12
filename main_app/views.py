@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Talent
+from .models import Talent, Learn
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -19,6 +19,7 @@ def talents_index(request):
     return render(request, 'talents/index.html', { 'talents': talents })
 
 
+# Talent
 class TalentCreate(LoginRequiredMixin,CreateView):
   model = Talent
   fields = ['skill', 'setting', 'leveling', 'image', 'color']
@@ -34,6 +35,21 @@ class TalentDelete(LoginRequiredMixin, DeleteView):
   model = Talent
   success_url = '/talents/'
 
+
+# Learn
+class LearnCreate(LoginRequiredMixin, CreateView):
+  model = Learn
+  fields = '__all__'
+
+class LearnUpdate(LoginRequiredMixin, UpdateView):
+  model = Learn
+  fields = ['skill']
+
+class LearnDelete(LoginRequiredMixin, DeleteView):
+  model = Learn
+  success_url = '/talents/'
+
+# Signup
 def signup(request):
   error_message = ''
   if request.method == 'POST':

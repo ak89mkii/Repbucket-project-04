@@ -8,60 +8,58 @@
   <div class="row">
     <div class="col-sm-4">
       <h1>Talents</h1>
+      <img src="{% static 'talent.png' %}" class="card-img" alt="..." height = 250px>
       <hr />
       
-{% if talent.level != "0 Exp" %}
-{% for talent in talents %}
-  <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="{{ talent.image }}" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{ talent.skill }}</h5>
-          <p class="card-text">Setting: {{ talent.setting }}</p>
-          <p class="card-text">Leveling: {{ talent.leveling }}</p>
-          <p class="card-text"><small class="text-whtie">Last updated ?</small></p>
-          <a class="btn btn-outline-light" href="{% url 'talents_update' talent.id %}">Edit</a>
-          <a class="btn btn-outline-light" href="{% url 'talents_delete' talent.id %}">Delete</a>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endfor %}
-
-    </div>
-  <div class="col-sm-4">
-    <h1></h1>
-    {% for talent in talents %}
-    
-
-    {% endfor %}
-
-  </div>
-  <div class="col-sm-4">
-    <h1>To Learn</h1>
-    <hr />
-    {% else %}
-    {% for talent in talents %}
-      <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="{{ talent.image }}" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ talent.skill }}</h5>
-              <p class="card-text">Setting: {{ talent.setting }}</p>
-              <p class="card-text">Leveling: {{ talent.leveling }}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      {% for talent in talents %}
+        <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{ talent.image }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ talent.skill }}</h5>
+                <p class="card-text">Setting: {{ talent.setting }}</p>
+                <p class="card-text">Leveling: {{ talent.leveling }}</p>
+                <p class="card-text"><small class="text-whtie">Last updated ?</small></p>
+                <a class="btn btn-outline-light" href="{% url 'talents_update' talent.id %}">Edit</a>
+                <a class="btn btn-outline-light" href="{% url 'talents_delete' talent.id %}">Delete</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
-    {% endif %}
+      {% endfor %}
+
+    </div>
+    <div class="col-sm-4">
+      <img src="{% static 'logo.png' %}" class="card-img" alt="..." height = 250px>
+      <hr />
+      {% for talent in talents %}
+
+      {% endfor %}
+
+    </div>
+    <div class="col-sm-4">
+      <h1>To Learn</h1>
+      <hr />
+      
+      {% for learn in learns %}
+        <div class="card {{ talent.color }} mb-3" style="max-width: 450px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{ talent.image }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ learn.skill }}</h5>
+                <p class="card-text"><small class="text-muted">Last updated ?</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    
 
 
   </div>

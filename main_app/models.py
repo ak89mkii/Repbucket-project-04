@@ -10,7 +10,8 @@ SETTINGS = (
 
 LEVELINGS = (
     ('Active', 'Active'),
-    ('Standby', 'Standby')
+    ('Standby', 'Standby'),
+    ('0 Exp', '0 Exp')
 )
 
 COLORS = (
@@ -41,6 +42,16 @@ class Talent(models.Model):
         choices=COLORS,
         default=COLORS[0][0]
     )
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.skill
+
+    def get_absolute_url(self):
+        return reverse('index')
+
+class Learn(models.Model):
+    skill = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
