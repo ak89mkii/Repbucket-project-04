@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Talent
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -18,12 +18,21 @@ def talents_index(request):
     talents = Talent.objects.filter(user=request.user)
     return render(request, 'talents/index.html', { 'talents': talents })
 
-class TalentCreate(CreateView):
+
+class TalentCreate(LoginRequiredMixin,CreateView):
   model = Talent
   fields = ['skill', 'setting', 'leveling', 'image', 'color']
   def form_valid(self, form):
     form.instance.user = self.request.user  
     return super().form_valid(form)
+
+class TalentUpdate(LoginRequiredMixin, UpdateView):
+  model = Talent
+  fields = ['skill', 'setting', 'leveling', 'image', 'color']
+
+class TalentDelete(LoginRequiredMixin, DeleteView):
+  model = Talent
+  success_url = '/talents/'
 
 def signup(request):
   error_message = ''
