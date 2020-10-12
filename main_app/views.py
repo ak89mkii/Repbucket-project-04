@@ -16,7 +16,8 @@ def about(request):
 @login_required
 def talents_index(request):
     talents = Talent.objects.filter(user=request.user)
-    return render(request, 'talents/index.html', { 'talents': talents })
+    learns = Learn.objects.filter(user=request.user)
+    return render(request, 'talents/index.html', { 'talents': talents, 'learns': learns })
 
 
 # Talent
@@ -39,7 +40,10 @@ class TalentDelete(LoginRequiredMixin, DeleteView):
 # Learn
 class LearnCreate(LoginRequiredMixin, CreateView):
   model = Learn
-  fields = '__all__'
+  fields = ['skill']
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
 
 class LearnUpdate(LoginRequiredMixin, UpdateView):
   model = Learn

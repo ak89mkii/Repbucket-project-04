@@ -60,3 +60,4 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 // https://stackoverflow.com/questions/11555931/make-footer-stick-to-bottom-of-page-using-twitter-bootstrap
 // https://thenounproject.com/search/?q=skills&i=2003018
 // https://thenounproject.com/search/?q=bracket&i=1780028
+// https://stackoverflow.com/questions/24813536/django-admin-not-showing-models/24814041
