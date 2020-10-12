@@ -20,7 +20,6 @@ COLORS = (
     ('text-white bg-danger', 'Red'),
     ('text-white bg-warning', 'Yellow'),
     ('text-white bg-info', 'Aqua'),
-    ('bg-light', 'White'),
     ('text-white bg-dark', 'Dark Grey')
 )
 
