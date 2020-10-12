@@ -9,6 +9,7 @@
     <div class="col-sm-4">
       <h1>Talents</h1>
       <img src="{% static 'talent.png' %}" class="card-img" alt="..." height = 250px>
+      <a class="btn btn-primary" href="{% url 'talents_create' %}">Add Skill</a>
       <hr />
       
       {% for talent in talents %}
@@ -42,6 +43,7 @@
     </div>
     <div class="col-sm-4">
       <h1>To Learn</h1>
+      <img src="{% static 'learn.png' %}" class="card-img" alt="..." height = 250px>
       <a class="btn btn-primary" href="{% url 'learns_create' %}">Add Skill</a>
       <hr />
       
