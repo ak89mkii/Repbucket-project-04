@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
   {% if object %}
@@ -6,6 +7,8 @@
   {% else %}
     <h1>Add a Skill to Learn</h1>
     <hr/>
+    <div class="col-sm-4">
+      <img src="{% static 'toadd.png' %}" class="card-img" alt="..." height = 250px>
   {% endif %}
   <form action="" method="post">
     {% csrf_token %}
