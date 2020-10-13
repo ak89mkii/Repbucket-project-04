@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-
-<h1>Talent Tree</h1>
+<br>
+<div class="card text-center bg-warning">
+  <h1>Talent Tree</h1>
+</div>
 <hr />
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
       <h1>Talents</h1>
-      <img src="{% static 'talent.png' %}" class="card-img" alt="..." height = 250px>
       <a class="btn btn-primary" href="{% url 'talents_create' %}">Add Talent</a>
       <hr />
       
@@ -34,7 +35,7 @@
 
     </div>
     <div class="col-sm-4">
-      <img src="{% static 'logo.png' %}" class="card-img" alt="..." height = 250px>
+      <img src="{% static 'talent.png' %}" class="card-img" alt="..." height = 250px>
       <hr />
       <div class="card text-center bg-warning">
         <h1>REP = 14</h1>
@@ -46,7 +47,7 @@
     </div>
     <div class="col-sm-4">
       <h1>To Learn</h1>
-      <img src="{% static 'learn.png' %}" class="card-img" alt="..." height = 250px>
+      
       <a class="btn btn-primary" href="{% url 'learns_create' %}">Add Skill to Learn</a>
       <hr />
       
