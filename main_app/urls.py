@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('talents/', views.talents_index, name='index'),
-    path('quests/', views.talents_index, name='quest/index'),
+    path('quests/', views.quests_index, name='quests/index'),
     path('accounts/signup/', views.signup, name='signup'),
     # talents
     path('talents/create/', views.TalentCreate.as_view(), name='talents_create'),

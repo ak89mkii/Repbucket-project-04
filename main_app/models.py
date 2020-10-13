@@ -87,7 +87,7 @@ class Quest(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('quest/index')
+        return reverse('quests/index')
 
 class Accept(models.Model):
     name = models.CharField(max_length=100)
@@ -99,5 +99,5 @@ class Accept(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('quest/index')
+        return reverse('quests/index')
 
