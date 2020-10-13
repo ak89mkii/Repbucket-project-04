@@ -57,6 +57,8 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 // https://www.tutorialrepublic.com/faq/how-to-align-responsive-image-in-center-in-bootstrap.php
 // https://stackoverflow.com/questions/11555931/make-footer-stick-to-bottom-of-page-using-twitter-bootstrap
 // https://stackoverflow.com/questions/24813536/django-admin-not-showing-models/24814041
+// https://www.codingforentrepreneurs.com/projects/try-django-2-2/publish-date-timestamp-updated
+// http://www.learningaboutelectronics.com/Articles/How-to-count-all-objects-of-a-database-table-in-Django.php
 
 // https://thenounproject.com:
 - https://thenounproject.com/search/?q=connections&i=1770813
@@ -64,3 +66,5 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 - https://thenounproject.com/term/bucket-list/3212168/
 - https://thenounproject.com/search/?q=skills&i=2003018
 - https://thenounproject.com/search/?q=bracket&i=1780028
+- https://thenounproject.com/term/quest/909406/
+- https://thenounproject.com/search/?q=world+map&i=2206266

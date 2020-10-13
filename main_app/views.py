@@ -18,7 +18,8 @@ def about(request):
 def talents_index(request):
     talents = Talent.objects.filter(user=request.user)
     learns = Learn.objects.filter(user=request.user)
-    return render(request, 'talents/index.html', { 'talents': talents, 'learns': learns })
+    count= Talent.objects.all().count()
+    return render(request, 'talents/index.html', { 'talents': talents, 'learns': learns, 'count': count })
 
 
 # Talent
