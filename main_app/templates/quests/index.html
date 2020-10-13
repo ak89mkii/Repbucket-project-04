@@ -68,8 +68,8 @@
                 <h5 class="card-title">{{ accept.skill }}</h5>
                 <p class="card-text">Description: {{ accept.description }}</p>
                 <p class="card-text"><small class="text-muted">Last updated {{ accept.timestamp }}</small></p>
-                <a class="btn btn-outline-light" href="{% url 'accepts_update' learn.id %}">Edit</a>
-                <a class="btn btn-outline-light" href="{% url 'accepts_delete' learn.id %}">Delete</a>
+                <a class="btn btn-outline-light" href="{% url 'accepts_update' accept.id %}">Edit</a>
+                <a class="btn btn-outline-light" href="{% url 'accepts_delete' accept.id %}">Delete</a>
               </div>
             </div>
           </div>

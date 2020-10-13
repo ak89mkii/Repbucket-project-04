@@ -23,5 +23,5 @@ urlpatterns = [
     # accepts
     path('accepts/create/', views.AcceptCreate.as_view(), name='accepts_create'),
     path('accepts/<int:pk>/update/', views.AcceptUpdate.as_view(), name='accepts_update'),
-    path('accepts/<int:pk>/delete/', views.AcceptDelete.as_view(), name='accepts_delete'),
+    path('accepts/<int:pk>/delete/', views.AcceptDelete.as_view(), name='accepts_delete')
 ]
