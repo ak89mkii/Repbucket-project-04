@@ -82,6 +82,22 @@ class QuestDelete(LoginRequiredMixin, DeleteView):
   success_url = '/quests/'
 
 
+# Accept
+class AcceptCreate(LoginRequiredMixin, CreateView):
+  model = Accept
+  fields = ['name', 'description']
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
+
+class AcceptUpdate(LoginRequiredMixin, UpdateView):
+  model = Accept
+  fields = ['name', 'description']
+
+class AcceptDelete(LoginRequiredMixin, DeleteView):
+  model = Accept
+  success_url = '/quests/'
+
 # Signup
 def signup(request):
   error_message = ''
