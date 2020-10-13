@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  {% if object %}
+    <h1>Edit <span class="">{{object.name}}</span></h1>
+  {% else %}
+    <h1>Add a Pending Quest</h1>
+    <hr/>
+    <div class="col-sm-4">
+      <img src="{% static 'quest.png' %}" class="card-img" alt="..." height = 250px>
+  {% endif %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit!" class="btn btn-warning">
+  </form>
+  <br>
+{% endblock %}

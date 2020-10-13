@@ -24,8 +24,8 @@ COLORS = (
 )
 
 STATUSES = (
-    ('Active', 'Active'),
-    ('Standby', 'Standby')
+    ('In Progress', 'In Progress'),
+    ('Completed', 'Completed')
 )
 
 class Talent(models.Model):
