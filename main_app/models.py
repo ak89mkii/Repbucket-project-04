@@ -10,8 +10,7 @@ SETTINGS = (
 
 LEVELINGS = (
     ('Active', 'Active'),
-    ('Standby', 'Standby'),
-    ('0 Exp', '0 Exp')
+    ('Standby', 'Standby')
 )
 
 COLORS = (
@@ -22,6 +21,11 @@ COLORS = (
     ('text-white bg-warning', 'Yellow'),
     ('text-white bg-info', 'Aqua'),
     ('text-white bg-dark', 'Dark Grey')
+)
+
+STATUSES = (
+    ('Active', 'Active'),
+    ('Standby', 'Standby')
 )
 
 class Talent(models.Model):
@@ -61,4 +65,39 @@ class Learn(models.Model):
 
     def get_absolute_url(self):
         return reverse('index')
+
+class Quest(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    status = models.CharField(
+        max_length=20,
+        choices=STATUSES,
+        default=STATUSES[0][0]
+    )
+    image = models.CharField(max_length=1000)
+    color = models.CharField(
+        max_length=30,
+        choices=COLORS,
+        default=COLORS[0][0]
+    )
+    timestamp = models.DateField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('quest/index')
+
+class Accept(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    timestamp = models.DateField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('quest/index')
 
