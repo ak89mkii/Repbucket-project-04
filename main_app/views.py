@@ -27,7 +27,7 @@ def quests_index(request):
     quests = Quest.objects.filter(user=request.user)
     accepts = Accept.objects.filter(user=request.user)
     count= Quest.objects.all().count()
-    return render(request, 'talents/index.html', { 'quests': quests, 'accepts': accepts, 'count': count })
+    return render(request, 'quests/index.html', { 'quests': quests, 'accepts': accepts, 'count': count })
 
 
 # Talent
