@@ -5,6 +5,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models.functions import Now
 
 
 def home(request):
@@ -24,6 +25,7 @@ def talents_index(request):
 class TalentCreate(LoginRequiredMixin,CreateView):
   model = Talent
   fields = ['skill', 'setting', 'leveling', 'image', 'color']
+  
   def form_valid(self, form):
     form.instance.user = self.request.user  
     return super().form_valid(form)

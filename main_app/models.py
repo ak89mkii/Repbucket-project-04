@@ -42,6 +42,7 @@ class Talent(models.Model):
         choices=COLORS,
         default=COLORS[0][0]
     )
+    timestamp = models.DateField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -52,6 +53,7 @@ class Talent(models.Model):
 
 class Learn(models.Model):
     skill = models.CharField(max_length=100)
+    timestamp = models.DateField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

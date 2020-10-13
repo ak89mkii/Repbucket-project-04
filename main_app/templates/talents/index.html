@@ -24,7 +24,7 @@
                 <h5 class="card-title">{{ talent.skill }}</h5>
                 <p class="card-text">Setting: {{ talent.setting }}</p>
                 <p class="card-text">Leveling: {{ talent.leveling }}</p>
-                <p class="card-text"><small class="text-whtie">Last updated ?</small></p>
+                <p class="card-text"><small class="text-whtie">Last updated {{ talent.timestamp }}</small></p>
                 <a class="btn btn-outline-light" href="{% url 'talents_update' talent.id %}">Edit</a>
                 <a class="btn btn-outline-light" href="{% url 'talents_delete' talent.id %}">Delete</a>
               </div>
@@ -37,9 +37,11 @@
     <div class="col-sm-4">
       <img src="{% static 'talent.png' %}" class="card-img" alt="..." height = 250px>
       <hr />
+      
       <div class="card text-center bg-warning">
-        <h1>REP = 14</h1>
+        <h1>REP = {% for talent in talents %}{{ forloop.revcounter }}{% endfor %}</h1>
       </div>
+     
       {% for talent in talents %}
         
       {% endfor %}
@@ -60,7 +62,7 @@
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title">{{ learn.skill }}</h5>
-                <p class="card-text"><small class="text-muted">Last updated ?</small></p>
+                <p class="card-text"><small class="text-muted">Last updated {{ learn.timestamp }}</small></p>
                 <a class="btn btn-outline-light" href="{% url 'learns_update' learn.id %}">Edit</a>
                 <a class="btn btn-outline-light" href="{% url 'learns_delete' learn.id %}">Delete</a>
               </div>
