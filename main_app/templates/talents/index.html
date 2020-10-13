@@ -61,6 +61,8 @@
               <div class="card-body">
                 <h5 class="card-title">{{ learn.skill }}</h5>
                 <p class="card-text"><small class="text-muted">Last updated ?</small></p>
+                <a class="btn btn-outline-light" href="{% url 'learns_update' learn.id %}">Edit</a>
+                <a class="btn btn-outline-light" href="{% url 'learns_delete' learn.id %}">Delete</a>
               </div>
             </div>
           </div>
