@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Talent, Learn
+from .models import Talent, Learn, Quest, Accept
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -20,6 +20,14 @@ def talents_index(request):
     learns = Learn.objects.filter(user=request.user)
     count= Talent.objects.all().count()
     return render(request, 'talents/index.html', { 'talents': talents, 'learns': learns, 'count': count })
+    
+
+@login_required
+def quests_index(request):
+    quests = Quest.objects.filter(user=request.user)
+    accepts = Accept.objects.filter(user=request.user)
+    count= Quest.objects.all().count()
+    return render(request, 'talents/index.html', { 'quests': quests, 'accepts': accepts, 'count': count })
 
 
 # Talent
@@ -55,6 +63,24 @@ class LearnUpdate(LoginRequiredMixin, UpdateView):
 class LearnDelete(LoginRequiredMixin, DeleteView):
   model = Learn
   success_url = '/talents/'
+
+
+# Quest
+class QuestCreate(LoginRequiredMixin, CreateView):
+  model = Quest
+  fields = ['name', 'description', 'image', 'color']
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
+
+class QuestUpdate(LoginRequiredMixin, UpdateView):
+  model = Quest
+  fields = ['name', 'description', 'image', 'color']
+
+class QuestDelete(LoginRequiredMixin, DeleteView):
+  model = Quest
+  success_url = '/quests/'
+
 
 # Signup
 def signup(request):
