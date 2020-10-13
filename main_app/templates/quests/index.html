@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<br>
+<div class="card text-center bg-warning">
+  <h1>Quest Board</h1>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+
+    <!-- Column 1 -->
+    <div class="col-sm-4">
+      <h1>Quests</h1>
+      <a class="btn btn-primary" href="{% url 'quests_create' %}">Add Quest</a>
+      <hr />
+      
+      {% for quest in quests %}
+        <div class="card {{ quest.color }} mb-3" style="max-width: 450px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{ quest.image }}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ quest.name }}</h5>
+                <p class="card-text">Description: {{ quest.description }}</p>
+                <p class="card-text">Status: {{ quest.status }}</p>
+                <p class="card-text"><small class="text-whtie">Last updated {{ talent.timestamp }}</small></p>
+                <a class="btn btn-outline-light" href="{% url 'quests_update' quest.id %}">Edit</a>
+                <a class="btn btn-outline-light" href="{% url 'quests_delete' quest.id %}">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-sm-4">
+      <img src="{% static 'quest.png' %}" class="card-img" alt="..." height = 250px>
+      <hr />
+      <div class="card text-center bg-warning">
+        <h1>REP = {{ count }}</h1>
+      </div>
+     
+      {% for quest in quests %}
+        
+      {% endfor %}
+
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col-sm-4">
+      <h1>To Accept</h1>
+      <a class="btn btn-primary" href="{% url 'accepts_create' %}">Add Pending Quest</a>
+      <hr />
+      
+      {% for accept in accepts %}
+        <div class="card text-white bg-dark mb-3" style="max-width: 450px">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{% static 'logo.png' %}" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ accept.skill }}</h5>
+                <p class="card-text">Description: {{ accept.description }}</p>
+                <p class="card-text"><small class="text-muted">Last updated {{ accept.timestamp }}</small></p>
+                <a class="btn btn-outline-light" href="{% url 'accepts_update' learn.id %}">Edit</a>
+                <a class="btn btn-outline-light" href="{% url 'accepts_delete' learn.id %}">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    
+
+
+  </div>
+</div>
+{% endblock %}
