@@ -1,0 +1,1 @@
+web: gunicorn <repbucket_project_04>.wsgi
