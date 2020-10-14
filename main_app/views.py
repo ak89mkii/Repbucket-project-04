@@ -79,7 +79,7 @@ class QuestUpdate(LoginRequiredMixin, UpdateView):
 
 class QuestDelete(LoginRequiredMixin, DeleteView):
   model = Quest
-  success_url = 'quests/'
+  success_url = '/quests/'
 
 
 # Accept
@@ -96,7 +96,7 @@ class AcceptUpdate(LoginRequiredMixin, UpdateView):
 
 class AcceptDelete(LoginRequiredMixin, DeleteView):
   model = Accept
-  success_url = 'quests/'
+  success_url = '/quests/'
 
 # Signup
 def signup(request):
