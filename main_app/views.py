@@ -68,14 +68,14 @@ class LearnDelete(LoginRequiredMixin, DeleteView):
 # Quest
 class QuestCreate(LoginRequiredMixin, CreateView):
   model = Quest
-  fields = ['name', 'description', 'image', 'color']
+  fields = ['name', 'description', 'status', 'image', 'color']
   def form_valid(self, form):
     form.instance.user = self.request.user  
     return super().form_valid(form)
 
 class QuestUpdate(LoginRequiredMixin, UpdateView):
   model = Quest
-  fields = ['name', 'description', 'image', 'color']
+  fields = ['name', 'description', 'status', 'image', 'color']
 
 class QuestDelete(LoginRequiredMixin, DeleteView):
   model = Quest
