@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import django_heroku
 
 import os
 import environ
@@ -128,5 +129,4 @@ LOGIN_REDIRECT_URL = '/talents/'
 
 LOGOUT_REDIRECT_URL = '/'
 
-import django_heroku
 django_heroku.settings(locals())
