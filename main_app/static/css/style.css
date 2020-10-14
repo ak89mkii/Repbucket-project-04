@@ -1,6 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: slategrey;
-  }
+   
+}
 
 .navbar-brand {
     font-size: 40px;
@@ -8,8 +14,4 @@ body {
 
 .navbar {
     font-size: 30px;
-}
-
-body {
-    height: 100%;
 }

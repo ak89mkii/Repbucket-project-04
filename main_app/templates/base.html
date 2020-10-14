@@ -9,6 +9,7 @@
     <title>RepBucket</title>
 </head>
 <body>
+    
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <a href="/" class="navbar-brand">
@@ -16,23 +17,27 @@
                 <h2 class="navbar-brand">RepBucket</h2>
             </a>
             {% if user.is_authenticated %}
-                <a class="nav-link" href="{% url 'about' %}">About</a>
+            
+                <a class="nav-link" href="{% url 'about' %}">Stats</a>
                 <a class="nav-link" href="{% url 'index' %}">Talent Tree</a>
-                <a href="{% url 'quests' %}">Quest Journal</a>
-                <a href="{% url 'logout' %}">Log Out</a>
+                <a class="nav-link" href="{% url 'quests' %}">Quest Journal</a>
+                <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+            
             {% else %}
-                <a href="{% url 'signup' %}">Sign Up</a>
-                <a href="{% url 'login' %}">Log In</a>
+            
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+            
             {% endif %}
         </nav>
-</body>
-</html>
-    <main class="container">
+    </header>
+    <main>
         {% block content %}
         {% endblock %}
     </main>
     <footer class="card-footer">
         <div class="right">All Rights Reserved, &copy; 2020 RepBucket &nbsp;</div>
     </footer>
+    
 </body>
 </html>
