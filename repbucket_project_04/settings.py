@@ -82,16 +82,16 @@ WSGI_APPLICATION = 'repbucket_project_04.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': env.db(),
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'repbucket',
-#     }
+#     'default': env.db(),
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'repbucket',
+    }
+}
 
 
 # Password validation
@@ -136,5 +136,5 @@ LOGIN_REDIRECT_URL = '/talents/'
 
 LOGOUT_REDIRECT_URL = '/'
 
-# import django_heroku
-# django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
