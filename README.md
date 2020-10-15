@@ -33,6 +33,10 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 ![Trello](img/trello.png)
 
 ## Screenshots:
+![Home](img/01.png)
+![About](img/02.png)
+![Talent](img/03.png)
+![Quest](img/04.png)
 
 ## Technology Used:
 - HTML
