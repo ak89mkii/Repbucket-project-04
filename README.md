@@ -68,3 +68,9 @@ Repbucket is a platform that "gamifies" the tracking and highlighting of achieve
 - https://thenounproject.com/search/?q=bracket&i=1780028
 - https://thenounproject.com/term/quest/909406/
 - https://thenounproject.com/search/?q=world+map&i=2206266
+- https://thenounproject.com/search/?q=gundam&i=21128
+- https://thenounproject.com/search/?q=Chef&i=642073
+- https://thenounproject.com/search/?q=space+shuttle&i=9702
+- https://thenounproject.com/search/?q=boxing&i=987638
+- https://thenounproject.com/search/?q=video+game+avatar&i=3469639
+- https://thenounproject.com/search/?q=video+game+map&i=2426613
