@@ -21,7 +21,7 @@ def maps_index(request):
 def talents_index(request):
     talents = Talent.objects.filter(user=request.user)
     learns = Learn.objects.filter(user=request.user)
-    count= Talent.objects.all().count()
+    count= Talent.objects.filter(user=request.user).count()
     return render(request, 'talents/index.html', { 'talents': talents, 'learns': learns, 'count': count })
     
 
@@ -29,7 +29,7 @@ def talents_index(request):
 def quests_index(request):
     quests = Quest.objects.filter(user=request.user)
     accepts = Accept.objects.filter(user=request.user)
-    count= Quest.objects.all().count() 
+    count= Quest.objects.filter(user=request.user).count() 
     return render(request, 'quests/index.html', { 'quests': quests, 'accepts': accepts, 'count': count })
 
 
